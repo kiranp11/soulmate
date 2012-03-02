@@ -24,6 +24,8 @@ module Soulmate
   def redis
     @redis ||= (
       url = URI(@redis_url || "redis://127.0.0.1:6379/0")
+      puts "**********************************"
+      puts url
 
       ::Redis.new({
         :host => url.host,
